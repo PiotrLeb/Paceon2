@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group= "me.piotrleb.paceon.buildlogic"
+group = "me.piotrleb.paceon.buildlogic"
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
@@ -10,4 +10,13 @@ dependencies {
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
+}
+
+gradlePlugin {
+    plugins {
+        register("AndroidApplication") {
+            id = "paceon.android.application"
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
+    }
 }

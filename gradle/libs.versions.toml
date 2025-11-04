@@ -48,6 +48,15 @@ playServicesMaps = "19.2.0"
 annotation = "1.9.1"
 androidx-lifecycle = "2.9.4"
 
+# Project versions
+projectApplicationId = "me.priotleb.paceon"
+projectVersionName = "1.0"
+projectMinSdkVersion = "34"
+projectTargetSdkVersion = "36"
+projectCompileSdkVersion = "36"
+projectVersionCode = "1"
+
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -123,3 +132,5 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 room = { id = "androidx.room", version.ref = "room" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
 mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin"}
+
+paceon-android-application = { id ="paceon.android.application", version="unspecified"}
