@@ -1,24 +1,22 @@
-import com.android.build.api.dsl.ApplicationExtension
-import me.piotrleb.convention.configureKotlinAndroid
-import me.piotrleb.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
+import com.android.build.api.dsl.ApplicationExtension
+import me.piotrleb.convention.ExtensionType
+import me.piotrleb.convention.configureBuildTypes
+import me.piotrleb.convention.configureKotlinAndroid
+import me.piotrleb.convention.libs
 
-// Gradle Plugin to globally use same config declared in one place
-class AndroidApplicationConventionPlugin: Plugin<Project>{
 
-    // Function that is called when the plugin is used
+class AndroidApplicationConventionPlugin: Plugin<Project> {
+
     override fun apply(target: Project) {
         target.run {
             pluginManager.run {
-                // Declaring multiple plugins that are necessary to function properly
                 apply("com.android.application")
                 apply("org.jetbrains.kotlin.android")
-
             }
-
-            extensions.configure<ApplicationExtension>{
+            extensions.configure<ApplicationExtension> {
                 defaultConfig {
                     applicationId = libs.findVersion("projectApplicationId").get().toString()
                     targetSdk = libs.findVersion("projectTargetSdkVersion").get().toString().toInt()
@@ -28,10 +26,11 @@ class AndroidApplicationConventionPlugin: Plugin<Project>{
                 }
 
                 configureKotlinAndroid(this)
-
+                configureBuildTypes(
+                    commonExtension = this,
+                    extensionType = ExtensionType.APPLICATION
+                )
             }
-
         }
     }
-
 }
