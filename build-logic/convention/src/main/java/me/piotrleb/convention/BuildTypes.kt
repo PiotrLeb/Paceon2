@@ -35,12 +35,8 @@ internal fun Project.configureBuildTypes(
             ExtensionType.LIBRARY -> {
                 extensions.configure<LibraryExtension>() {
                     buildTypes {
-                        debug {
-                            configureDebugBuildType(apiKey)
-                        }
-                        release {
-                            configureReleaseBuildType(commonExtension, apiKey)
-                        }
+                        debug { configureDebugBuildType(apiKey) }
+                        release { configureReleaseBuildType(commonExtension, apiKey)  }
                     }
                 }
             }

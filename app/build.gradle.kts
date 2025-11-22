@@ -1,6 +1,7 @@
 plugins {
+    alias(libs.plugins.paceon.android.application.compose)
     alias(libs.plugins.mapsplatform.secrets.plugin)
-    alias(libs.plugins.paceon.android.application)
+
 }
 // Extension
 android {
@@ -9,11 +10,6 @@ android {
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-
-    buildFeatures {
-        compose = true
     }
 }
 

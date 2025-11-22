@@ -18,5 +18,9 @@ gradlePlugin {
             id = "paceon.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("AndroidApplicationCompose") {
+            id = "paceon.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
     }
 }
