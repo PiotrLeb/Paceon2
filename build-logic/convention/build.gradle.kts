@@ -14,13 +14,17 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        register("AndroidApplication") {
+        register("androidApplication") {
             id = "paceon.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
-        register("AndroidApplicationCompose") {
+        register("androidApplicationCompose") {
             id = "paceon.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
+        register("androidLibrary") {
+            id = "paceon.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
         }
     }
 }

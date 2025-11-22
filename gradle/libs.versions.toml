@@ -135,3 +135,4 @@ mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.
 
 paceon-android-application = { id ="paceon.android.application", version="unspecified"}
 paceon-android-application-compose = { id ="paceon.android.application.compose", version="unspecified"}
+paceon-android-library = { id ="paceon.android.library", version="unspecified"}
