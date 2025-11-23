@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.paceon.android.application.compose)
+    alias(libs.plugins.paceon.jvm.ktor)
     alias(libs.plugins.mapsplatform.secrets.plugin)
 
 }

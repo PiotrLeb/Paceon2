@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.paceon.android.library)
+    alias(libs.plugins.paceon.jvm.ktor)
 }
 
 android {
