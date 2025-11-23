@@ -1,6 +1,8 @@
 plugins {
+    alias(libs.plugins.paceon.android.application.compose)
+    alias(libs.plugins.paceon.jvm.ktor)
     alias(libs.plugins.mapsplatform.secrets.plugin)
-    alias(libs.plugins.paceon.android.application)
+
 }
 // Extension
 android {
@@ -9,19 +11,6 @@ android {
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    buildFeatures {
-        compose = true
     }
 }
 
