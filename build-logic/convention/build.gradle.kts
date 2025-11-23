@@ -34,5 +34,9 @@ gradlePlugin {
             id = "paceon.android.feature.ui"
             implementationClass = "AndroidFeatureUiConventionPlugin"
         }
+        register("androidRoom") {
+            id = "paceon.android.room"
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
     }
 }
