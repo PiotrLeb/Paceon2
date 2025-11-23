@@ -139,7 +139,7 @@ paceon-android-library = { id ="paceon.android.library", version="unspecified"}
 paceon-android-library-compose = { id ="paceon.android.library.compose", version="unspecified"}
 paceon-android-feature-ui = { id ="paceon.android.feature.ui", version="unspecified"}
 paceon-android-room = { id ="paceon.android.room", version="unspecified"}
-
+paceon-jvm-library = { id ="paceon.jvm.library", version="unspecified"}
 
 [bundles]
 compose = [

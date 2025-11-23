@@ -38,5 +38,9 @@ gradlePlugin {
             id = "paceon.android.room"
             implementationClass = "AndroidRoomConventionPlugin"
         }
+        register("jvmLibrary") {
+            id = "paceon.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
     }
 }
